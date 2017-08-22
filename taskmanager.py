@@ -12,7 +12,7 @@ QueueManager.register('get_task_queue' , callable=lambda:task_queue)
 
 QueueManager.register('get_result_queue' , callable=lambda:result_queue)
 
-manager = QueueManager(address=('' , 5000) , authkey = 'abc')
+manager = QueueManager(address=('' , 5000) , authkey = 'alex')
 
 manager.start()
 
@@ -28,7 +28,7 @@ for  i in range(10):
 print('Try get results...')
 
 for i in range(10):
-	r = result.get(timeout=10)
+	r = result.get(timeout=3000)
 	print 'Result: %s' % r
 
 manager.shutdown()

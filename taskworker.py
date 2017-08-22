@@ -12,7 +12,7 @@ server_addr = '127.0.0.1'
 
 print 'Connect to server %s...' % server_addr
 
-m = QueueManager(address=(server_addr , 5000) , authkey='abc')
+m = QueueManager(address=(server_addr , 5000) , authkey='alex')
 
 m.connect()
 
