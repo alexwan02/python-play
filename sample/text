@@ -1,1 +1,7 @@
-text write
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+A Python version of Unix 'tail -f'
+20
+import timee
+hello
+python
