@@ -42,10 +42,14 @@ def grep(pattern , tartget):
 	# for line in lines:
 	# 	if pattern in line:
 	# 		yield line
-	while True:
-		line = (yield)
-		if pattern in line:
-			tartget.send(line)
+	print 'Looking for %s' % pattern
+	try:
+		while True:
+			line = (yield)
+			if pattern in line:
+				tartget.send(line)
+	except GeneratorExit:
+		print 'Going away. Goodbye'
 
 @coroutine
 def countdown(n):
